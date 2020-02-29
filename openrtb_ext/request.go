@@ -17,7 +17,13 @@ type ExtRequestPrebid struct {
 	Cache                *ExtRequestPrebidCache `json:"cache,omitempty"`
 	StoredRequest        *ExtStoredRequest      `json:"storedrequest,omitempty"`
 	Targeting            *ExtRequestTargeting   `json:"targeting,omitempty"`
+        BidderParam     *BidderParam    `json:"bidderparams,omitempty"`
 }
+type BidderParam struct {
+partnerName map[string]string 
+appnexus map[string]string
+}
+
 
 // ExtRequestPrebidCache defines the contract for bidrequest.ext.prebid.cache
 type ExtRequestPrebidCache struct {
